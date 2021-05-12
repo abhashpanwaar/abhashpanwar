@@ -4,7 +4,7 @@
 		<title>RESUME</title>
 		<meta content='width=device-width, initial-scale=1, shrink-to-fit=no' name='viewport'/>
 		<link href='fontawesome/css/all.min.css' rel='stylesheet'/> <!--load all styles -->
-
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       	<link href='https://lh3.googleusercontent.com/-LSy-wA3ZqNc/XqQ3_wigOAI/AAAAAAAAkQI/fcI9aiAbs8ErXLFVe_0Ln7V-YKSf2qfVACLcBGAsYHQ/h120/favicon.png' rel='icon' sizes='16x16' type='image/gif'/>
 		<style type='text/css'>
 			body
@@ -14,11 +14,11 @@
 			.name
 			{
 				color:#1a4c71;
-				font-size: 40px;
+				font-size: 50px;
 			}
 			.name-info
 			{
-				font-weight: bold;
+				
 				font-size: 20px;
 				color:#4c4a4a;
 			}
@@ -53,8 +53,7 @@
 			a
 			{
 				text-decoration: none;
-				text-anchor: none;
-				color: black!important;
+				text-anchor: none;				
 			}
 			.m-t-25
 			{
@@ -62,11 +61,12 @@
 			}
 			.content-heading
 			{
-				color:#1a4c71;
+				color:#109fdc;
+				margin-bottom: 15px;
 			}
 			.content-heading2
 			{
-				color:#1a4c71;
+				color:#1177a2;
 				font-weight: bold;
 			}
 			.content
@@ -77,50 +77,127 @@
 			{
 				margin-bottom: 20px;
 			}
+			.header-style
+			{
+				background-color: #04192c;
+				color:white;
+			}
+			.header-style a
+			{
+				/*background-color: #04192c;*/
+				color:white;
+			}
+			.color-white{ color: white;}
+			.name,.name-info{ color:white;}
+			#user-name
+			{
+				position: absolute;
+				bottom: 0px;		
+				font-weight: bold;						
+			}
+			.header
+			{
+				background-image: url(header3.jpg);
+				background-repeat: no-repeat;
+  				background-size: 100% 100%;
+			}
+			.content
+			{
+				border: #327ac6 2px solid;
+				padding-top: 0px;
+				margin-top: 10px;				
+			}
+			.content-left a{ text-decoration: none;
+			color: inherit; font-size: inherit;}
 		</style>
 
-      	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js' type='text/javascript'/>
-     <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js' type='text/javascript'/>
-    <script type='text/javascript'>
-        $(&quot;#btnPrint&quot;).live(&quot;click&quot;, function () {
-            var divContents = $(&quot;html&quot;).html();
-            var printWindow = window.open(&#39;&#39;, &#39;&#39;, &#39;height=400,width=800&#39;);
-      		var code=&quot;&lt;html&gt;&quot;+divContents+&quot;&lt;/html&gt;&quot;
-      		printWindow.document.write(code);
+     	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js' type='text/javascript'/>
+    	<script type='text/javascript'>
+			$(&quot;#btnPrint&quot;).live(&quot;click&quot;, function () {
+				var divContents = $(&quot;html&quot;).html();
+				var printWindow = window.open(&#39;&#39;, &#39;&#39;, &#39;height=400,width=800&#39;);
+				var code=&quot;&lt;html&gt;&quot;+divContents+&quot;&lt;/html&gt;&quot;
+				printWindow.document.write(code);
 
-            printWindow.document.close();
-            printWindow.print();
-      console.log(code)
-        });
-    </script>
+				printWindow.document.close();
+				printWindow.print();
+					console.log(code)
+						});
+		</script>
 
 
 	</head>
    <b:skin><![CDATA[
 ]]></b:skin>
 	<body style='font-size: 1.1rem;font-weight: 500'>			
+		<style>
+			.bar{
+			background-color: #3b4483;
+			padding: 2px;
+			border-radius: 15px;
+			margin-bottom: 5px;
+			font-size: 14px;
+			color: #FFF;
+			font-weight: bold;
+			text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+			}
+			.bar::before{
+			content:  attr(data-skill);
+			background-color: #f3b0ff;
+			display: inline-block;
+			padding: 5px 0 5px 10px;
+			border-radius: inherit;
+			animation: load 2s 0s;
+			-webkit-animation: load 2s 0s;
+			-moz-animation: load 2s 0s;
+			-o-animation: load 2s 0s;
+			}
+
+			.bar.front::before{
+			background-color: #ffcc33;
+			}
+			.bar.back::before{
+			background-color: #62acb5;
+			}
+
+			.bar.learning::before{
+			width: calc(20% - 10px);
+			}
+			.bar.basic::before{
+			width: calc(40% - 10px);
+			}
+			.bar.intermediate::before{
+			width: calc(60% - 10px);
+			}
+			.bar.advanced::before{
+			width: calc(80% - 10px);
+			}
+			.bar.expert::before{
+			width: calc(100% - 10px);
+			}
+			.skills { padding: 0 10px 0px 10px;}
+		</style>
 		<b:section class='header-section' id='header-section' maxwidgets='1' showaddelement='no'/>
-		<div class='container header'>			
+		<div class='container header header-style'>			
 			<div class='row'>
 				<div class='col-xs-12 col-sm-4 col-md-4 m-t-15 l-h'>
-					<span class='font-1'><img height='20px' src='https://lh3.googleusercontent.com/-oBQQMBzyYaA/XqQ2MyVGWvI/AAAAAAAAkP8/LV6A_SlzoLMaavSTRDFKvEaeobcjkvSGACLcBGAsYHQ/h120/phone.png' width='20px'/> <span>+91 7877349856</span></span>
+					<span class='font-1'> <i  class="fa fa-phone" aria-hidden="true"></i>  <span>+91 7877349856</span></span>
 					<br/>
-					<span class='font-1'><img height='20px' src='https://lh3.googleusercontent.com/-b0_gcGEIInk/XqQ1dkxLobI/AAAAAAAAkPc/BbveJsD5gfQQ-_xJzwUUz4uDo5CrIoK1QCLcBGAsYHQ/h120/email.png' width='20px'/> <span>abhash1997@gmail.com</span></span>
+					<span class='font-1'><i class="fa fa-envelope-o" aria-hidden="true"></i>  <span for="email">abhash1997@gmail.com</span></span>
 					<br/>
-					<span class='font-1'><a href='https://www.linkedin.com/in/abhash-panwar-85126976/' target='_blank'><img height='20px' src='https://lh3.googleusercontent.com/-87E1SC5HazI/XqQ1dk4NJlI/AAAAAAAAkPY/6RxVVLza5Vk-jbvU4PqiyEUYphtfGyNngCLcBGAsYHQ/h120/linkedin.png' width='20px'/>  <span>/in/abhash-panwar-85126976/</span></a></span>
+					<span class='font-1'><a href='https://www.linkedin.com/in/panwar-abhash-anil/' target='_blank'><i class="fa fa-linkedin-square" aria-hidden="true"></i>  <span>/in/panwar-abhash-anil/</span></a></span>
 					<br/>
-					<span class='font-1'><a href='https://github.com/abhashpanwar' target='_blank'><img height='20px' src='https://lh3.googleusercontent.com/-_W4gvVLAM9Q/XqQ2Mg5SpyI/AAAAAAAAkP4/_QBdHjATKVQ2MYgG6ylGBwY0R-bzFj8OQCLcBGAsYHQ/h120/github.png' width='20px'/>  <span>abhashpanwar</span></a></span>
+					<span class='font-1'><a href='https://github.com/abhashpanwar' target='_blank'><i class="fa fa-github" aria-hidden="true"></i>  <span>abhashpanwar</span></a></span>
+					<br/>
+					<span class='font-1'><a href='https://abhashpanwar.medium.com/' target='_blank'><i class="fa fa-rss-square" aria-hidden="true"></i>  <span>abhashpanwar.medium.com</span></a></span>
+					
 				</div>
-				<div class='col-xs-12 col-sm-8 col-md-8'>
+				<div class='col-xs-12 col-sm-8 col-md-8' id="header-right">
 					<div class='row'>
-						<div class='col-xs-8 col-sm-8 col-md-8'>
+						<div class='col-xs-8 col-sm-8 col-md-8' id="user-name">
 							<span class='name'>Panwar Abhash Anil</span><br/>
-							<span class='name-info'>Pursuing Data Science <br/> at Central University of Rajasthan</span>
-						</div>
-
-						<div class='col-xs-4 col-sm-4 col-md-4 m-t-15 d-none d-sm-block'>
-							<img align='right' height='120' src='https://lh3.googleusercontent.com/-W-qO2EoQ0Is/XqQzwyFkrHI/AAAAAAAAkPM/DhlxEqGoYjQKnfz4YBhnMVD-vxrXtoDgACLcBGAsYHQ/h120/pic.jpg' width='120'/>
-						</div>
+							<span class='name-info'>Data Science Enthusiast</span>
+						</div>						
 					</div>
 				</div>
 			</div>
@@ -128,66 +205,157 @@
 
 		<div class='container content'>
 			<div class='row'>
-				<div class='col-xs-12 col-sm-4 col-md-4 content-left'>
-					<div class='box1'>Programming</div>
-					<ul>
-						<li>Advanced: <b>PHP</b></li>
-						<li>Basic: <b>C, C++, MySql, Python, R</b></li>
-					</ul>
+				<div class='col-xs-12 col-sm-4 col-md-4 content-left page-wrap'>
+					<div class='box1'>Skills</div>
+					<div class="skills">
+						<div class="bar back expert" data-skill="Python"></div>
+						<div class="bar back advanced" data-skill="Power BI Desktop"></div>
+						<div class="bar back advanced" data-skill="SQL"></div>
+						<div class="bar back expert" data-skill="Matplotlib/Seaborn"></div>
+						<div class="bar back intermediate" data-skill="Django"></div>
+						<div class="bar back intermediate" data-skill="Docker"></div>					
+					</div>					
 
-					<div class='box1 m-t-25'>MOOCs</div>
+					<div class='box1 m-t-25'>Certificates</div>
 					<ul>
 						<li>
-                          <a href='https://coursera.org/share/a2740f78b2f073cbce94a5c440312929' target='_blank'>
-                          	<b>Python for Data Science and AI</b> by Coursera
+                          <a href='https://coursera.org/share/df2532f7c184e09b27105523ed340000' target='_blank'>
+                          	Foundations of Data Science
                           </a>
-                      	</li>
+                      	</li>												 
 
                       	<li>
                           <a href='https://coursera.org/share/2c546a3ea7727aa71876ddb1bd26bfad' target='_blank'>
-                          	<b>Data Analysis with Python</b> by Coursera
+                          	Applied Natural Language Processing
                           </a>
                       	</li>
-
                       	<li>
+                          <a href='https://www.guvi.in/verify-certificate?id=sr06bf0O746P143n5V' target='_blank'>
+                          	Deep Learning
+                          </a>
+                      	</li>
+						<li>
                           <a href='https://coursera.org/share/df2532f7c184e09b27105523ed340000' target='_blank'>
-                          	<b>Applied Text Mining in Python</b> by Coursera
+                          	Time Series Analysis in Python
+                          </a>
+                      	</li>
+						  <li>
+                          <a href='https://coursera.org/share/a2740f78b2f073cbce94a5c440312929' target='_blank'>
+                          	Microsoft Power BI Desktop
                           </a>
                       	</li>
 					</ul>
 
-					<div class='box1 m-t-25'>Interests</div>
-					<ul>
-						<li>Python</li>
+					<div class='box1 m-t-25'>Area of interests</div>
+					<ul>						
 						<li>Machine Learning</li>
-						<li>Deep Learning</li>
-						<li>Web Development</li>
+						<li>NLP</li>
+						<li>Time Series Analysis</li>
 					</ul>
 				</div>
 				<div class='col-xs-12 col-sm-8 col-md-8'>
 					<div class='c1'>
 						<h2 class='content-heading'>Experience</h2>
 						<div class='row'>
+							<div class='col-md-3 col-sm-3 col-xs-3'>Feb.2021 - Apr.2021</div>
+							<div class='col-md-9 col-sm-9 col-xs-9'>
+								<span class='content-heading2'>Data Science Trainee</span> at EC-Council
+								<p>
+									My role involves research and development of an end-to-end projectfor the marketing department so that the marketing team can createthe strategy for their product. From gathering data (unstructureddata) from various sources to extracting meaningful insights usingMachine Learning(ML) algorithms
+									<ul style="padding-left: 20px;">
+										<li>Lead a team of 2 data science trainees, provided guidance intechnical skills and development of prototypes.</li>
+										<li>Performed statistical analysis.</li>
+										<li>Developed functional prototypes of data products, incorporated analytical solutions, visualization, machine learning, natural language processing, and graph analytics.</li>
+										<li>Created various machine learning-based tools within the com-pany, such as recommendation engines.</li>
+									</ul>
+								</p>
+							</div>
+						</div>
+						<div class='row'>
 							<div class='col-md-3 col-sm-3 col-xs-3'>Oct.2017 - Apr.2018</div>
 							<div class='col-md-9 col-sm-9 col-xs-9'>
-								<span class='content-heading2'>Intern in ATN Technologies Pvt. Ltd.</span> at Jodhpur <br/>Web developer in <b>Codeignter and PHP</b>
+								<span class='content-heading2'>Intern in ATN Technologies Pvt. Ltd.</span> at Jodhpur
+								<p>Web developer in <b>Codeignter and PHP</b></p>
 							</div>
 						</div>
 					</div>
 					<hr/>
 					<div class='c1 m-t-15'>
-						<h2 class='content-heading'>Personal project</h2>
-						<div class='row'>
-							<div class='col-md-3 col-sm-3 col-xs-3'>Feb. 2020</div>
-							<div class='col-md-9 col-sm-9 col-xs-9'><span class='content-heading2'>Webscraping using Python</span><br/>
-							Development of a python program to <b>fetch data from likes, dislikes comments, etc. of a video</b> from youtube.com and analysis of these data to some insights. <a href='#'  target='_blank'><i style='color:dodgerblue'>More Details</i></a>
-							</div>
+						<h2 id="personal-projects" class='content-heading'>Personal project</h2>
+						<div class="row">
+								<div class="col-lg-12">									
+									<h5><b>Credit Risk Modeling using Machine Learning -</b> <small><a href="https://github.com/abhashpanwar/credit-risk-modeling" target="_blank">Project Link</a></small></h5>	
+								</div>
+								<ul>
+									<li>The project goal is to predict expected loss (PD*LGD*EAD) and to generate score card using machine learning so that lenders can make a decision whether to grant a loan or not.</li>
+									<li>Evaluation metrics: Gini-Coefficient and Kolmogorov–Smirnov test.</li>
+									<li>I have also deployed the model on Heroku. <a href="https://abhash-crm.herokuapp.com/" target="_blank"></a></li>
+								</ul>							
 						</div>
-                      <div class='row'>
-							<div class='col-md-3 col-sm-3 col-xs-3'>June. 2020</div>
-							<div class='col-md-9 col-sm-9 col-xs-9'><span class='content-heading2'>Used Car Price Prediction using Machine Learning</span><br/>
-							This project include Data Cleaning, Data Preprocessing, 8 Different ML Models and Some Insights from Data. <a href='https://medium.com/@abhashpanwar/used-car-price-prediction-using-machine-learning-e3be02d977b2' target='_blank'><i style='color:dodgerblue'>More Details</i></a>
-							</div>
+						<div class="row">
+								<div class="col-lg-12">									
+									<h5><b>Sentiment Analysis Using BERT Transformer -</b>
+										<small><a href="https://github.com/abhashpanwar/Sentiment-Analysis-Using-BERT" target="_blank">Project Link</a></small></h5>	
+								</div>
+								<ul>
+									<li>The project goal is to predict the sentiment of text i.e the review is postive or negative.</li>
+									<li>The BERT Transformer is trained on IMBD dataset having 50K movie reviews.</li>
+									<li>It include Data Preprocessing, Fine Tuning Bert Transformer and deployment using Flaskapp.</li>									
+								</ul>							
+						</div>
+						<div class="row">
+								<div class="col-lg-12">									
+									<h5><b>Recommendation System -</b>
+										<small><a href="https://github.com/abhashpanwar/recommendation-system" target="_blank">Project Link</a></small></h5>	
+								</div>
+								<ul>
+									<li>The project goal is to build a Recommendation System, a system based on content filtering and collaborative filtering using KNN and cosine similarity.</li>
+									<li>It include Data Preprocessing, transforming text into some numerical form, etc.</li>
+									<li>End result will be a system that Recommend similar movies for the given movie.</li>									
+								</ul>							
+						</div>
+						<div class="row">
+								<div class="col-lg-12">									
+									<h5><b>Used Car Price Prediction using ML -</b>
+										<small><a href="https://medium.com/@abhashpanwar/used-car-price-prediction-using-machine-learning-e3be02d977b2" target="_blank">Project Link</a></small></h5>	
+								</div>
+								<ul>
+									<li>The project goal is predicting the price of the used cars using machine learning. It is an End-to-End project</li>
+									
+									<li>It include Data Cleaning, Data Preprocessing, 8 Different ML Models then get some Insights from Data.</li>
+									<li>I have deployed a project using <a href="https://abhash-car-price-prediction.herokuapp.com/" target="_blank">Django on Heroku</a>.</li>
+								</ul>							
+						</div>
+						<div class="row">
+								<div class="col-lg-12">									
+									<h5><b>Stock Price Prediction (Time Series Analysis) -</b>
+										<small><a href="https://github.com/abhashpanwar/machine-learning/blob/master/Time Series/stock-price-prediction-time-series-analysis-final.ipynb" target="_blank">Project Link</a></small></h5>	
+								</div>
+								<ul>
+									<li>This project goal is to build an basic model for stock market prediction.</li>									
+									<li>The AR, MA, ARMA, ARIMA models are implimented and ACF \& PACF are used to determine the order of models and at the end automation library is also used to determine orders.</li>									
+								</ul>							
+						</div>
+						<div class="row">
+								<div class="col-lg-12">									
+									<h5><b>Sales Forecasting (Retail Sector) -</b>
+										<small><a href="https://github.com/abhashpanwar/Modelling-In-Operations-Management" target="_blank">Project Link</a></small></h5>	
+								</div>
+								<ul>
+									<li>This project goal is to forecast the sales of individual store.</li>
+									<li>It include data cleaning, handling missing values, data Preprocessing, etc.</li>
+									<li>Models Implemented: Lasso Regression, Random forest regressor, Time series models(AR, MA, ARIMA) and DNN.</li>									
+								</ul>							
+						</div>
+						<div class="row">
+								<div class="col-lg-12">									
+									<h5><b>Webscraping using Python -</b>
+										<small><a href="https://medium.com/analytics-vidhya/web-scraping-and-analysis-of-extracted-data-fe4ee855da06" target="_blank">Project Link</a></small></h5>	
+								</div>
+								<ul>
+									<li>The project goal is to build an python program that will fetch the data i.e likes, dislikes comments, etc. from Youtube video</li>
+									<li>It include data extraction and data analysis</li>									
+								</ul>							
 						</div>
 					</div>
 					<hr/>
@@ -208,26 +376,13 @@
 							Bachelor&#39;s Degree <span class='content-heading2'>Computer Science</span> at <b><i>Lachoo Memorial College of Science and Technology , Jodhpur</i></b><br/>
 							<b>Courses:</b> Computer Science, Physics, Mathematics, English, Environmental Science, etc.
 							</div>
-						</div>
-
-						<div class='row m-t-15'>
-							<div class='col-md-3 col-sm-3 col-xs-3'>2014 - 2015</div>
-							<div class='col-md-9 col-sm-9 col-xs-9'>
-							Senior Secondary Education at <b><i>Apna Vidhyalaya Senior Secondary School, Jodhpur</i>,RBSE Board</b>
-							</div>
-						</div>
-
-						<div class='row m-t-15'>
-							<div class='col-md-3 col-sm-3 col-xs-3'>2013</div>
-							<div class='col-md-9 col-sm-9 col-xs-9'>
-							Matriculation at <b><i>Central Modern School, Jodhpur</i>,RBSE Board</b>
-							</div>
-						</div>
+						</div>						
 					</div>
 
 				</div>
 			</div>
 		</div>
+
 		<link crossorigin='anonymous' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' rel='stylesheet'/>
 
 		<script crossorigin='anonymous' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js'/>
